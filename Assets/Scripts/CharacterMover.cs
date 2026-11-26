@@ -9,22 +9,26 @@ public class CharacterMover : MonoBehaviour
     public Camera cam;
     public float movementAcceleration;
     public float movementDeceleration;
-    Vector3 currentMov;
     public float speedMovement;
     public float speedTurn;
     public float jumpForce;
-    Rigidbody rb;
-    GroundDetector gd;
     public float airSpeedFollowup = 1f;
-    float airSpeedFollowupCurrent;
-    InputSystem_Actions input;
     public Vector3 velocity { get; private set; }
     public float velocityAngular { get; private set; }
     public Vector3 velocityAxis { get; private set; }
+
+
+    Vector3 currentMov;
+    Rigidbody rb;
+    GroundDetector gd;
+
+    float airSpeedFollowupCurrent;
+    InputSystem_Actions input;
     Quaternion velocityRotation;
     Vector3 lastPos;
     Quaternion lastRot;
-    // Start is called before the first frame update
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -33,6 +37,7 @@ public class CharacterMover : MonoBehaviour
         input = new InputSystem_Actions();
         input.Enable();
     }
+
     private void Update()
     {
         if (gd.grounded && input.Player.Jump.WasPressedThisFrame())
@@ -40,14 +45,17 @@ public class CharacterMover : MonoBehaviour
             rb.linearVelocity = transform.up * jumpForce;
         }
     }
+
     void FixedUpdate()
     {
         Velocity();
-        Movement();
 
         lastPos = transform.position;
         lastRot = transform.rotation;
+
+        Movement();
     }
+
     void Velocity()
     {
         velocity = transform.InverseTransformDirection((transform.position - lastPos) / Time.fixedDeltaTime);
@@ -64,6 +72,7 @@ public class CharacterMover : MonoBehaviour
 
         airSpeedFollowupCurrent = Mathf.Clamp(airSpeedFollowupCurrent + Time.fixedDeltaTime, 0, airSpeedFollowup);
     }
+
     void Movement()
     {
         if (gd.grounded)
@@ -96,6 +105,7 @@ public class CharacterMover : MonoBehaviour
             rb.Move(rb.position + currentMov * speedMovement * Time.fixedDeltaTime, rot);
         }
     }
+
     void DroppedOff()
     {
         if (airSpeedFollowupCurrent > 0)

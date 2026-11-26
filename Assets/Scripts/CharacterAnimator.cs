@@ -18,6 +18,7 @@ public class CharacterAnimator : MonoBehaviour
     public RaycastLookAt cameraLookAt;
     public float lookAtSpeed = 10;
     Vector3 lookat;
+
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -28,13 +29,20 @@ public class CharacterAnimator : MonoBehaviour
 
         lookat = cameraLookAt.lookingAt;
     }
+    
     void Update()
     {
-        anim.SetFloat("Sideways", cm.velocity.x);
-        anim.SetFloat("Upwards", cm.velocity.y);
-        anim.SetFloat("Forward", cm.velocity.z);
-        anim.SetFloat("Rotation", cm.velocityAngular * rotationScale);
-        anim.SetBool("Grounded", gd.grounded);
+        // anim.SetFloat("Sideways", cm.velocity.x);
+        // anim.SetFloat("Upwards", cm.velocity.y);
+        // anim.SetFloat("Forward", cm.velocity.z);
+        // anim.SetFloat("Rotation", cm.velocityAngular * rotationScale);
+        // anim.SetBool("Grounded", gd.grounded);
+
+        bool isIdle = cm.velocity.magnitude < 1f && gd.grounded; 
+        anim.SetFloat("x", cm.velocity.x);
+        anim.SetFloat("y", cm.velocity.z);
+        anim.SetBool("isIdle", isIdle);
+        anim.SetBool("isGrounded", gd.grounded);
 
         FixLookat();
 
