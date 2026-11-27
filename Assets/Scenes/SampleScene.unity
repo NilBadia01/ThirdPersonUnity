@@ -6844,7 +6844,7 @@ GameObject:
   - component: {fileID: 764550819}
   m_Layer: 3
   m_Name: GunHolder
-  m_TagString: Untagged
+  m_TagString: Gun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7563,7 +7563,7 @@ GameObject:
   - component: {fileID: 866033694}
   m_Layer: 3
   m_Name: GunOrigin
-  m_TagString: Untagged
+  m_TagString: Gun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9147,10 +9147,10 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
+  - component: {fileID: 1998457232}
   - component: {fileID: 963194230}
   - component: {fileID: 963194229}
   - component: {fileID: 963194231}
-  - component: {fileID: 1998457231}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -9226,7 +9226,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: -3}
+  m_LocalPosition: {x: 0, y: 1.785, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9957,7 +9957,7 @@ GameObject:
   - component: {fileID: 1089316527}
   m_Layer: 3
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15446,7 +15446,7 @@ MonoBehaviour:
   gunRightHand: {fileID: 1255041503}
   gunLeftHand: {fileID: 240571657}
   lookAtMaxAngle: 0.5
-  cameraLookAt: {fileID: 1998457231}
+  cameraLookAt: {fileID: 963194231}
   lookAtSpeed: 10
 --- !u!1 &1633383457
 GameObject:
@@ -16750,6 +16750,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 834192292310563322, guid: 53c66411043aa1148adb16330710481a, type: 3}
+      propertyPath: m_TagString
+      value: Gun
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 53c66411043aa1148adb16330710481a, type: 3}
       propertyPath: m_Name
       value: ar style gun
@@ -16757,6 +16761,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 53c66411043aa1148adb16330710481a, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 53c66411043aa1148adb16330710481a, type: 3}
+      propertyPath: m_TagString
+      value: Gun
       objectReference: {fileID: 0}
     - target: {fileID: 1297022756241194859, guid: 53c66411043aa1148adb16330710481a, type: 3}
       propertyPath: m_Layer
@@ -19054,7 +19062,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: a336e18fbb405874f9e22febc61969a7, type: 3}
---- !u!114 &1998457231
+--- !u!114 &1998457232
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -19063,13 +19071,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e45f0727aa22a2740b3100698a45f8f3, type: 3}
+  m_Script: {fileID: 11500000, guid: bbb496c75afed0e499a88b9297cf06e7, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
-  maxDistance: 1000
-  lookAtMask:
-    serializedVersion: 2
-    m_Bits: 55
+  m_EditorClassIdentifier: Assembly-CSharp::CameraScript
+  target: {fileID: 2120384274}
+  distance: 2
+  sphereCastRadius: 0.5
+  sphereCastMaxLength: 1
 --- !u!1 &2008407361
 GameObject:
   m_ObjectHideFlags: 0
