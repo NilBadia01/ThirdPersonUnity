@@ -41,6 +41,7 @@ public class CharacterAnimator : MonoBehaviour
         bool isIdle = cm.velocity.magnitude < 1f && gd.grounded; 
         anim.SetFloat("x", cm.velocity.x);
         anim.SetFloat("y", cm.velocity.z);
+        anim.SetFloat("speed", cm.velocity.magnitude);
         anim.SetBool("isIdle", isIdle);
         anim.SetBool("isGrounded", gd.grounded);
 
