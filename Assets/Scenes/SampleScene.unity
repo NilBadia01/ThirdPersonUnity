@@ -6857,14 +6857,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 764550817}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.36754248, y: 0.5466234, z: 0.46176925, w: 0.59404093}
-  m_LocalPosition: {x: -0.106, y: 0.0985, z: 0.0328}
+  m_LocalRotation: {x: 0.59328336, y: 0.50171185, z: 0.4181901, w: 0.47054988}
+  m_LocalPosition: {x: 0, y: 1.4, z: 0.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 866033694}
-  m_Father: {fileID: 1658036965}
-  m_LocalEulerAnglesHint: {x: -70.305, y: 66.899, z: 25.823}
+  m_Father: {fileID: 799558025}
+  m_LocalEulerAnglesHint: {x: -75.551, y: 56.224, z: 36.041}
 --- !u!114 &764550819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12040,9 +12040,9 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 1852576806548013000, guid: ae97368b69385924baec8e613078128f, type: 3}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: ae97368b69385924baec8e613078128f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1658036965}
+      addedObject: {fileID: 764550818}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ae97368b69385924baec8e613078128f, type: 3}
       insertIndex: -1
@@ -13597,11 +13597,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: a336e18fbb405874f9e22febc61969a7, type: 3}
---- !u!4 &1434830698 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1852576806548013000, guid: ae97368b69385924baec8e613078128f, type: 3}
-  m_PrefabInstance: {fileID: 1229651431}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1448187726
 GameObject:
   m_ObjectHideFlags: 0
@@ -15802,38 +15797,6 @@ MonoBehaviour:
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
   m_ScrollDeltaPerTick: 6
---- !u!1 &1658036964
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1658036965}
-  m_Layer: 3
-  m_Name: Gun Socket
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1658036965
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1658036964}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 764550818}
-  m_Father: {fileID: 1434830698}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1667870580
 GameObject:
   m_ObjectHideFlags: 0
