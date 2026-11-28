@@ -19075,7 +19075,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraScript
   target: {fileID: 2120384274}
-  distance: 2
+  speed: 4
+  maxDistance: 3
+  minDistance: 1
+  offset: 12
   sphereCastRadius: 0.5
   sphereCastMaxLength: 1
 --- !u!1 &2008407361

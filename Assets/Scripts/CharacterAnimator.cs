@@ -29,6 +29,8 @@ public class CharacterAnimator : MonoBehaviour
 
         lookat = cameraLookAt.lookingAt;
     }
+
+    bool flag = false;
     
     void Update()
     {
